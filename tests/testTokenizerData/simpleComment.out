@@ -1,0 +1,9 @@
+OpenComment
+Text " greeting "
+CloseComment
+Text "hello\n"
+OpenComment
+Text " {% if foo %}bar{% else %} "
+CloseComment
+Text "\n"
+EndOfInput

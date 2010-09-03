@@ -1,0 +1,5 @@
+OpenVariable
+Text " variable|filter:"}}" "
+CloseVariable
+Text "\n"
+EndOfInput

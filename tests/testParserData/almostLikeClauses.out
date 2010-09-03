@@ -1,0 +1,2 @@
+Template
+  Text "{$ foo bar baz $}\n{ { { { {\n"

@@ -1,0 +1,6 @@
+Template
+  Text "My first name is "
+  Variable first_name
+  Text ". My last name is "
+  Variable last_name
+  Text ".\n"

@@ -1,0 +1,10 @@
+Text "My first name is "
+OpenVariable
+Text " first_name "
+CloseVariable
+Text ". My last name is "
+OpenVariable
+Text " last_name "
+CloseVariable
+Text ".\n"
+EndOfInput

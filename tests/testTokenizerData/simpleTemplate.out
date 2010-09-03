@@ -1,0 +1,47 @@
+OpenTag
+Text " extends "base_generic.html" "
+CloseTag
+Text "\n\n"
+OpenTag
+Text " block title "
+CloseTag
+OpenVariable
+Text " section.title "
+CloseVariable
+OpenTag
+Text " endblock "
+CloseTag
+Text "\n\n"
+OpenTag
+Text " block content "
+CloseTag
+Text "\n<h1>"
+OpenVariable
+Text " section.title "
+CloseVariable
+Text "</h1>\n\n"
+OpenTag
+Text " for story in story_list "
+CloseTag
+Text "\n<h2>\n  <a href=""
+OpenVariable
+Text " story.get_absolute_url "
+CloseVariable
+Text "">\n    "
+OpenVariable
+Text " story.headline|upper "
+CloseVariable
+Text "\n  </a>\n</h2>\n<p>"
+OpenVariable
+Text " story.tease|truncatewords:"100" "
+CloseVariable
+Text "</p>\n"
+OpenTag
+Text " endfor "
+CloseTag
+Text "\n"
+OpenTag
+Text " endblock "
+CloseTag
+Text "\n"
+EndOfInput

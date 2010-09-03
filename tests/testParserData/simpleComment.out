@@ -1,0 +1,5 @@
+Template
+  Comment " greeting "
+  Text "hello\n"
+  Comment " {% if foo %}bar{% else %} "
+  Text "\n"

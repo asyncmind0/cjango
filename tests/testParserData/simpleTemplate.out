@@ -1,0 +1,23 @@
+Template
+  Tag
+  Text "\n\n"
+  Tag
+  Variable section.title
+  Tag
+  Text "\n\n"
+  Tag
+  Text "\n<h1>"
+  Variable section.title
+  Text "</h1>\n\n"
+  Tag
+  Text "\n<h2>\n  <a href=""
+  Variable story.get_absolute_url
+  Text "">\n    "
+  Variable story.headline
+  Text "\n  </a>\n</h2>\n<p>"
+  Variable story.tease
+  Text "</p>\n"
+  Tag
+  Text "\n"
+  Tag
+  Text "\n"

@@ -1,0 +1,13 @@
+OpenTag
+Text " if is_logged_in "
+CloseTag
+Text "Thanks for logging in!"
+OpenTag
+Text " else "
+CloseTag
+Text "Please log in."
+OpenTag
+Text " endif "
+CloseTag
+Text "\n"
+EndOfInput

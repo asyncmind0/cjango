@@ -1,0 +1,5 @@
+OpenTag
+Text " foo "{# bar %}" "{{ baz }}" "
+CloseTag
+Text "\n"
+EndOfInput
