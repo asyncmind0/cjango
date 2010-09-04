@@ -28,7 +28,8 @@ TEST_P(TemplateTest, Tokenize) {
         std::string variableLine;
         getline(variableStream, variableLine);
         int pos = variableLine.find_first_of(' ');
-        assert(pos != std::string::npos);
+        if (pos == std::string::npos)
+            break;
         
         std::string variable = variableLine.substr(0, pos);
         while (pos < variableLine.size() && isWhitespace(variableLine[pos]))
@@ -43,12 +44,14 @@ TEST_P(TemplateTest, Tokenize) {
     strcat(inputFile, testName);
     strcat(inputFile, ".in");
     std::fstream inputStream(inputFile, std::fstream::in);
+    ASSERT_TRUE(inputStream.good());
     
     char* resultFile = (char*) malloc(sizeof(char) * (strlen(DATA_PATH) + strlen(testName) + strlen(".out") + 1));
     strcpy(resultFile, DATA_PATH);
     strcat(resultFile, testName);
     strcat(resultFile, ".out");
     std::fstream resultStream(resultFile, std::fstream::in);
+    ASSERT_TRUE(resultStream.good());
     
     Parser parser(&inputStream);
     TemplateNode* root = parser.parse();
