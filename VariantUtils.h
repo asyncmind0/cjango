@@ -14,7 +14,7 @@ inline Variant variantFromString(const std::string& string)
     if (isLiteral(string))
         return Variant(string.substr(1, string.size() - 2));
     else if (isInteger(string))
-        return Variant(strtol(string.c_str(), 0, 10));
+        return Variant(static_cast<int>(strtol(string.c_str(), 0, 10)));
     else
         return Variant(); // FIXME: how about real numbers?
 }
