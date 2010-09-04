@@ -167,6 +167,6 @@ TEST_P(ParserTest, Parse) {
 }
 
 INSTANTIATE_TEST_CASE_P(Basic, ParserTest, ::testing::Values(
-    "almostLikeClauses", "emptyFile", "filterWithLiteralParameter", "simpleComment", "simpleTag", "simpleTemplate", "simpleVariable", "tagWithLiteralParameter"
+    "almostLikeClauses", "emptyFile", "filterWithLiteralParameter", "simpleComment", "simpleTag", "simpleTemplate", "simpleVariable", "tagWithLiteralParameter", "withTag"
     ));
 

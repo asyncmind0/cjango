@@ -49,19 +49,19 @@ bool splitTagExpression(const std::string& expression, std::string& tagName, std
     tagName = expression.substr(i, k - i);
 
     assert(parameters.empty());
-    while (k < j && isWhitespace(expression[k]))
+    while (k <= j && isWhitespace(expression[k]))
         ++k;
 
     if (k != j) {
-        while (k < j && isWhitespace(expression[k]))
+        while (k <= j && isWhitespace(expression[k]))
             ++k;
 
         bool inLiteral = false;
-        while (k < j) {
-            while (k < j && isWhitespace(expression[k]))
+        while (k <= j) {
+            while (k <= j && isWhitespace(expression[k]))
                 ++k;
             i = k;
-            while (k < j && (inLiteral || !isWhitespace(expression[k]))) {
+            while (k <= j && (inLiteral || !isWhitespace(expression[k]))) {
                 if (expression[k] == '"')
                     inLiteral = !inLiteral;
                 ++k;

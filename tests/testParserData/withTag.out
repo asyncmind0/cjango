@@ -1,0 +1,20 @@
+Template
+  Text "A variable: "
+  Variable foo
+  Text "\nA second variable: "
+  Variable bar
+  Text "\n"
+  Tag "with" "foo" "as" "baz"
+    Text "\nAn alias to the first variable: "
+    Variable baz
+    Text "\n    "
+    Tag "with" "bar" "as" "foo"
+      Text "\nAn alias to the second variable: "
+      Variable foo
+      Text "\n    "
+    Text "\n"
+  Text "\nThe first alias out ot scope: "
+  Variable baz
+  Text "\nThe first variable again: "
+  Variable foo
+  Text "\n"
