@@ -72,6 +72,6 @@ TEST_P(TemplateTest, Tokenize) {
 }
 
 INSTANTIATE_TEST_CASE_P(Basic, TemplateTest, ::testing::Values(
-    "almostLikeClauses", "emptyFile", "filterWithLiteralParameter", "simpleComment", "simpleTag", "simpleTemplate", "simpleVariable", "tagWithLiteralParameter"
+    "almostLikeClauses", "emptyFile", "filterWithLiteralParameter", "simpleComment", "simpleTag", "simpleTemplate", "simpleVariable", "tagWithLiteralParameter", "withTag"
     ));
 

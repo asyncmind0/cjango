@@ -1,0 +1,10 @@
+A variable: 1
+A second variable: 2
+
+An alias to the first variable: 1
+    
+An alias to the second variable: 2
+    
+
+The first alias out ot scope: 
+The first variable again: 1

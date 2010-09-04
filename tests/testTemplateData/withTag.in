@@ -1,0 +1,10 @@
+A variable: {{ foo }}
+A second variable: {{ bar }}
+{% with foo as baz %}
+An alias to the first variable: {{ baz }}
+    {% with bar as foo %}
+An alias to the second variable: {{ foo }}
+    {% endwith %}
+{% endwith %}
+The first alias out ot scope: {{ baz }}
+The first variable again: {{ foo }}
