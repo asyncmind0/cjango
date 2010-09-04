@@ -1,12 +1,21 @@
 #ifndef _TAGNODEFACTORY_H
 #define	_TAGNODEFACTORY_H
 
+#include "HashUtils.h"
 #include "TagNode.h"
 
+#include <cstring>
 #include <tr1/unordered_map>
 
+struct stringCompare {
+    inline bool operator()(const char *s1, const char *s2) const
+    {
+        return strcmp(s1, s2) == 0;
+    }
+};
+
 typedef TagNode* (*TagNodeFactoryFunction)(Node* parent);
-typedef std::tr1::unordered_map<const char*, TagNodeFactoryFunction> TagNodeFactoryMap;
+typedef std::tr1::unordered_map<const char*, TagNodeFactoryFunction, stringHash, stringCompare> TagNodeFactoryMap;
 
 class TagNodeFactory {
 public:
