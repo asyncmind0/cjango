@@ -16,10 +16,14 @@ sources = [
     'TextNode.cpp',
     'Tokenizer.cpp',
     'VariableExpression.cpp',
-    'VariableNode.cpp'
+    'VariableNode.cpp',
+    
+    'tags/WithTagNode.cpp',
     ];
 
 env.SharedLibrary(target = target, source = sources)
 env.Append(CCFLAGS = ['-g'])
 env.Append(CPPPATH = ['../'])
+env.Append(CPPPATH = ['./'])
+env.Append(CPPPATH = ['./tags'])
 

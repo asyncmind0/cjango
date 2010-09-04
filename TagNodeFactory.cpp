@@ -1,12 +1,30 @@
 #include "TagNodeFactory.h"
 
+#include "Node.h"
+
 #include <cassert>
+
+#include "WithTagNode.h"
+
+template <typename TagNodeClass>
+static TagNode* createTagNode(Node* parent)
+{
+    return new TagNodeClass(parent);
+}
+
+void registerBuiltinTags()
+{
+    TagNodeFactory* factory = TagNodeFactory::self();
+    factory->registerTag("with", createTagNode<WithTagNode>);
+}
 
 TagNodeFactory* TagNodeFactory::self()
 {
     static TagNodeFactory* factory = 0;
-    if (!factory)
+    if (!factory) {
         factory = new TagNodeFactory();
+        registerBuiltinTags();
+    }
     return factory;
 }
 
