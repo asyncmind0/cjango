@@ -1,0 +1,2 @@
+{# greeting #}hello
+{# {% if foo %}bar{% else %} #}
