@@ -2,6 +2,7 @@ env = Environment()
 
 env.Program(target='testVariant', source=['testVariant.cpp'])
 env.Program(target='testParser', source=['testParser.cpp'])
+env.Program(target='testTemplate', source=['testTemplate.cpp'])
 env.Program(target='testTokenizer', source=['testTokenizer.cpp'])
 
 env.Append(CCFLAGS = ['-g'])

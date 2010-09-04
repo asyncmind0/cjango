@@ -2,6 +2,7 @@
 *.o
 *.so
 .sconsign.dblite
-testParser
-testTokenizer
-testVariant
+tests/testParser
+tests/testTemplate
+tests/testTokenizer
+tests/testVariant
