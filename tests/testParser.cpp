@@ -3,6 +3,7 @@
 #include "CommentNode.h"
 #include "Node.h"
 #include "Parser.h"
+#include "TagNode.h"
 #include "TemplateNode.h"
 #include "TextNode.h"
 #include "VariableExpression.h"
@@ -11,6 +12,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 
 const char* nodeTypeName(Node::Type type)
 {
@@ -82,8 +84,24 @@ void printNode(std::string& output, Node* node)
             output.push_back('"');
             break;
         }   
-        case Node::Tag:
+        case Node::Tag: {
+            TagNode* tagNode = static_cast<TagNode*>(node);
+            output.push_back(' ');
+            output.push_back('"');
+            output.append(tagNode->name());
+            output.push_back('"');
+            
+            const std::vector<std::string>& parameters = tagNode->parameters();
+            std::vector<std::string>::const_iterator it = parameters.begin();
+            std::vector<std::string>::const_iterator end = parameters.end();
+            for (it; it != end; ++it) {
+                output.push_back(' ');
+                output.push_back('"');
+                output.append(removeNewLines(*it));
+                output.push_back('"');
+            }
             break;
+        }
         case Node::Variable: {
             VariableNode* variableNode = static_cast<VariableNode*>(node);
             output.push_back(' ');

@@ -1,15 +1,15 @@
 Template
-  Tag
+  Tag ""
   Text "\n\n"
-  Tag
+  Tag ""
   Variable section.title
-  Tag
+  Tag ""
   Text "\n\n"
-  Tag
+  Tag ""
   Text "\n<h1>"
   Variable section.title
   Text "</h1>\n\n"
-  Tag
+  Tag ""
   Text "\n<h2>\n  <a href=""
   Variable story.get_absolute_url
   Text "">\n    "
@@ -17,7 +17,7 @@ Template
   Text "\n  </a>\n</h2>\n<p>"
   Variable story.tease
   Text "</p>\n"
-  Tag
+  Tag ""
   Text "\n"
-  Tag
+  Tag ""
   Text "\n"

@@ -1,7 +1,7 @@
 Template
-  Tag
+  Tag ""
   Text "Thanks for logging in!"
-  Tag
+  Tag ""
   Text "Please log in."
-  Tag
+  Tag ""
   Text "\n"
