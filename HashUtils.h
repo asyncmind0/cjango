@@ -23,6 +23,7 @@
 #ifndef _HASHUTILS_H
 #define _HASHUTILS_H
 
+#include <stddef.h>
 #include <tr1/functional>
 
 struct stringHash : public std::unary_function<const char*, size_t>
