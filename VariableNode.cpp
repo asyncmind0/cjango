@@ -27,14 +27,15 @@
 
 #include <string>
 
-VariableNode::VariableNode(Node* parent)
+VariableNode::VariableNode(Node* parent, const std::string& variable)
     : Node(Variable, parent)
-    , m_expression(0)
+    , m_expression(VariableExpression::parse(variable))
 {
 }
 
 VariableNode::~VariableNode()
 {
+    delete m_expression;
 }
 
 void VariableNode::render(Context* context, std::ostream* stream) const

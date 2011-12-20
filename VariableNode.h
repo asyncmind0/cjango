@@ -33,16 +33,15 @@
 
 class VariableNode : public Node {
 public:
-    VariableNode(Node* parent);
+    VariableNode(Node* parent, const std::string& variable);
     ~VariableNode();
 
     const VariableExpression* expression() const { return m_expression; }
-    void setExpression(const VariableExpression* expression) { assert(!m_expression); m_expression = expression; }
     
     void render(Context* context, std::ostream* stream) const;
 
 private:
-    const VariableExpression* m_expression;
+    VariableExpression* m_expression;
 };
 
 #endif	/* _VARIABLENODE_H */

@@ -146,8 +146,7 @@ TemplateNode* Parser::parse()
                         std::string variable;
                         assert(splitVariableExpression(token.contents, variable));
 
-                        VariableNode* variableNode = new VariableNode(current);
-                        variableNode->setExpression(VariableExpression::parse(variable));
+                        VariableNode* variableNode = new VariableNode(current, variable);
                         break;
                     }
                     case Tokenizer::Token::OpenTag: {
