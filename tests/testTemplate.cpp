@@ -91,6 +91,8 @@ TEST_P(TemplateTest, Tokenize) {
         ASSERT_EQ(resultLine, outputLine) << "Line " << line;
         ++line;
     }
+    
+    delete root;
 }
 
 INSTANTIATE_TEST_CASE_P(Basic, TemplateTest, ::testing::Values(

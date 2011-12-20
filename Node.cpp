@@ -38,6 +38,15 @@ Node::Node(Type type, Node* parent)
 
 Node::~Node()
 {
+    if (parent())
+        parent()->remove(this);
+
+    Node* node = firstChild();
+    while (node) {
+        Node* next = node->nextSibling();
+        delete node;
+        node = next;
+    }
 }
 
 void Node::append(Node* node)
@@ -59,4 +68,14 @@ void Node::append(Node* node)
         node->setPreviousSibling(lastChild);
         setLastChild(node);
     }
+}
+
+void Node::remove(Node* node)
+{
+    assert(node->parent() == this);
+    if (node->previousSibling())
+        node->previousSibling()->setNextSibling(node->nextSibling());
+    if (node->nextSibling())
+        node->nextSibling()->setPreviousSibling(node->previousSibling());
+    node->setParent(0);
 }

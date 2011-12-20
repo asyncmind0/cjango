@@ -186,6 +186,8 @@ TEST_P(ParserTest, Parse) {
         ASSERT_EQ(resultLine, outputLine) << "Line " << line;
         ++line;
     }
+    
+    delete root;
 }
 
 INSTANTIATE_TEST_CASE_P(Basic, ParserTest, ::testing::Values(

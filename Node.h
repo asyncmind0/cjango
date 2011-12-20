@@ -56,6 +56,7 @@ public:
     Node* previousSibling() { return m_previousSibling; }
 
     void append(Node* node);
+    void remove(Node* node);
 
     virtual void render(Context* context, std::ostream* stream) const = 0;
 
