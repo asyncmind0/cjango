@@ -20,13 +20,14 @@
  * SOFTWARE.
  */
 
-#ifndef _WITHTAGNODE_H
-#define _WITHTAGNODE_H
+#ifndef _CJANGO_WITHTAGNODE_H
+#define _CJANGO_WITHTAGNODE_H
 
 #include "TagNode.h"
 
 #include "Node.h"
 
+namespace cjango{
 class WithTagNode : public TagNode {
 public:
     WithTagNode(Node* parent);
@@ -36,6 +37,7 @@ public:
     
     void render(Context* context, std::ostream* stream) const;
 };
+}
 
 #endif  /* _WITHTAGNODE_H */
 

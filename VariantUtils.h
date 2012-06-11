@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-#ifndef _VARIANTUTILS_H
-#define	_VARIANTUTILS_H
+#ifndef _CJANGO_VARIANTUTILS_H
+#define	_CJANGO_VARIANTUTILS_H
 
 #include "ASCIIUtils.h"
 #include "Variant.h"
@@ -29,6 +29,7 @@
 #include <cstdlib>
 #include <string>
 
+namespace cjango{
 // The c_str() calls are unacceptable. We really should only be operating on an char*
 // in such a critical part.
 inline Variant variantFromString(const std::string& string)
@@ -63,4 +64,5 @@ inline std::ostream& operator<<(std::ostream& stream, const Variant& variant)
     return stream;
 }
 
+}
 #endif	/* _VARIANTUTILS_H */

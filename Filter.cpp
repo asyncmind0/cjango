@@ -22,10 +22,12 @@
 
 #include "Filter.h"
 
+namespace cjango{
 Filter::Filter()
 {
 }
 
 Filter::~Filter()
 {
+}
 }

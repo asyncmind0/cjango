@@ -27,6 +27,7 @@
 
 #include <string>
 
+namespace cjango{
 VariableNode::VariableNode(Node* parent, const std::string& variable)
     : Node(Variable, parent)
     , m_expression(VariableExpression::parse(variable))
@@ -43,4 +44,5 @@ void VariableNode::render(Context* context, std::ostream* stream) const
     assert(m_expression);
     Variant value = m_expression->evaluate(context);
     *stream << value;
+}
 }

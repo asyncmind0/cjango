@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-#ifndef _DEFINES_H
-#define	_DEFINES_H
+#ifndef _CJANGO_DEFINES_H
+#define	_CJANGO_DEFINES_H
 
 #define DISALLOW_COPY_AND_ASSIGN(TypeName) \
     TypeName(const TypeName&); \

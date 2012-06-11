@@ -28,6 +28,7 @@
 
 #include "WithTagNode.h"
 
+namespace cjango{
 template <typename TagNodeClass>
 static TagNode* createTagNode(Node* parent)
 {
@@ -76,4 +77,5 @@ void TagNodeFactory::registerTag(const char* tagName, TagNodeFactoryFunction fun
 bool TagNodeFactory::isTagRegistered(const char* tagName)
 {
     return m_factoryMap.find(tagName) != m_factoryMap.end();
+}
 }

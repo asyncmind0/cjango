@@ -20,11 +20,12 @@
  * SOFTWARE.
  */
 
-#ifndef _NODE_H
-#define	_NODE_H
+#ifndef _CJANGO_NODE_H
+#define	_CJANGO_NODE_H
 
 #include <ostream>
 
+namespace cjango{
 class Context;
 class Node {
 public:
@@ -78,5 +79,6 @@ private:
     Node* m_nextSibling;
     Node* m_previousSibling;
 };
+}
 
 #endif	/* _NODE_H */

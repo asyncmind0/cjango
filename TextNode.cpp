@@ -26,6 +26,7 @@
 
 #include <cassert>
 
+namespace cjango{
 TextNode::TextNode(Node* parent)
     : Node(Text, parent)
 {
@@ -39,4 +40,5 @@ void TextNode::render(Context* context, std::ostream* stream) const
 {
     assert(!firstChild());
     *stream << m_text;
+}
 }

@@ -20,13 +20,14 @@
  * SOFTWARE.
  */
 
-#ifndef _VARIANT_H
-#define	_VARIANT_H
+#ifndef _CJANGO_VARIANT_H
+#define	_CJANGO_VARIANT_H
 
 #include <cassert>
 #include <typeinfo>
 #include <tr1/memory>
 
+namespace cjango{
 class Variant {
 public:
     Variant()
@@ -164,5 +165,6 @@ private:
 
     std::tr1::shared_ptr<AbstractData> m_data;
 };
+}
 
 #endif	/* _VARIANT_H */

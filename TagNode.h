@@ -20,14 +20,15 @@
  * SOFTWARE.
  */
 
-#ifndef _TAGNODE_H
-#define	_TAGNODE_H
+#ifndef _CJANGO_TAGNODE_H
+#define	_CJANGO_TAGNODE_H
 
 #include "Node.h"
 
 #include <string>
 #include <vector>
 
+namespace cjango{
 class TagNode : public Node {
 public:
     TagNode(Node* parent);
@@ -45,5 +46,6 @@ private:
     std::string m_name;
     std::vector<std::string> m_parameters;
 };
+}
 
 #endif	/* _TAGNODE_H */

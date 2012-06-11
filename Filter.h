@@ -20,13 +20,14 @@
  * SOFTWARE.
  */
 
-#ifndef _FILTER_H
-#define	_FILTER_H
+#ifndef _CJANGO_FILTER_H
+#define	_CJANGO_FILTER_H
 
 #include "Variant.h"
 
 #include <vector>
 
+namespace cjango{
 class Filter {
 public:
     Filter();
@@ -34,5 +35,6 @@ public:
 
     virtual bool apply(Variant& variant, const std::vector<Variant>& arguments) const = 0;
 };
+}
 
 #endif	/* _FILTER_H */

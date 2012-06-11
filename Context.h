@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-#ifndef _CONTEXT_H
-#define	_CONTEXT_H
+#ifndef _CJANGO_CONTEXT_H
+#define	_CJANGO_CONTEXT_H
 
 #include "Variant.h"
 
@@ -29,8 +29,8 @@
 #include <tr1/unordered_map>
 #include <vector>
 
+namespace cjango{
 typedef std::tr1::unordered_map<std::string, Variant> VariableMap;
-
 class Context {
 public:
     Context(const VariableMap& variables = VariableMap());
@@ -47,5 +47,6 @@ public:
 private:
     std::vector<VariableMap> m_variableStack;
 };
+}
 
 #endif	/* _CONTEXT_H */

@@ -23,6 +23,7 @@
 #include "WithTagNode.h"
 
 #include "Context.h"
+namespace cjango{
 
 WithTagNode::WithTagNode(Node* parent)
     : TagNode(parent)
@@ -49,5 +50,6 @@ void WithTagNode::render(Context* context, std::ostream* stream) const
         node->render(context, stream);
     
     context->pop();
+}
 }
 

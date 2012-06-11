@@ -20,11 +20,12 @@
  * SOFTWARE.
  */
 
-#ifndef _NULLTAGNODE_H
-#define	_NULLTAGNODE_H
+#ifndef _CJANGO_NULLTAGNODE_H
+#define	_CJANGO_NULLTAGNODE_H
 
 #include "TagNode.h"
 
+namespace cjango{
 class NullTagNode : public TagNode {
 public:
     NullTagNode(Node* parent);
@@ -34,5 +35,6 @@ public:
 
     bool isSelfClosing() const { return true; }
 };
+}
 
 #endif	/* _NULLTAGNODE_H */

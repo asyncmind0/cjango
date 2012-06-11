@@ -20,11 +20,11 @@
  * SOFTWARE.
  */
 
-#ifndef _ASCIIUTILS_H
-#define	_ASCIIUTILS_H
+#ifndef _CJANGO_ASCIIUTILS_H
+#define	_CJANGO_ASCIIUTILS_H
 
 #include <string>
-
+namespace cjango{
 inline bool isWhitespace(char c)
 {
     switch (c) {
@@ -73,4 +73,5 @@ inline bool isLiteral(const std::string& string)
     return true;
 }
 
+}
 #endif	/* _ASCIIUTILS_H */

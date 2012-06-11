@@ -24,6 +24,7 @@
 
 #include <cassert>
 
+namespace cjango{
 Node::Node(Type type, Node* parent)
     : m_type(type)
     , m_parent(0)
@@ -78,4 +79,5 @@ void Node::remove(Node* node)
     if (node->nextSibling())
         node->nextSibling()->setPreviousSibling(node->previousSibling());
     node->setParent(0);
+}
 }

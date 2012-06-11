@@ -20,14 +20,15 @@
  * SOFTWARE.
  */
 
-#ifndef _FILTERFACTORY_H
-#define	_FILTERFACTORY_H
+#ifndef _CJANGO_FILTERFACTORY_H
+#define	_CJANGO_FILTERFACTORY_H
 
 #include "Filter.h"
 #include "Variant.h"
 
 #include <tr1/unordered_map>
 
+namespace cjango{
 typedef std::tr1::unordered_map<const char*, Filter*> FilterMap;
 
 class FilterFactory {
@@ -45,5 +46,6 @@ private:
 private:
     FilterMap m_factoryMap;
 };
+}
 
 #endif	/* _FILTERFACTORY_H */

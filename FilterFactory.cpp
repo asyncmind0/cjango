@@ -24,6 +24,7 @@
 
 #include <cassert>
 
+namespace cjango{
 FilterFactory* FilterFactory::self()
 {
     static FilterFactory* factory = 0;
@@ -57,4 +58,5 @@ void FilterFactory::registerFilter(const char* filterName, Filter* filter)
 bool FilterFactory::isFilterRegistered(const char* filterName)
 {
     return m_factoryMap.find(filterName) != m_factoryMap.end();
+}
 }

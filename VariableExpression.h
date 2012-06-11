@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-#ifndef _VARIABLEEXPRESSION_H
-#define	_VARIABLEEXPRESSION_H
+#ifndef _CJANGO_VARIABLEEXPRESSION_H
+#define	_CJANGO_VARIABLEEXPRESSION_H
 
 #include "Context.h"
 #include "Variant.h"
@@ -29,6 +29,7 @@
 #include <string>
 #include <vector>
 
+namespace cjango{
 class VariableExpression {
 public:
     struct VariableFilterCall {
@@ -53,5 +54,5 @@ private:
     std::string m_name;
     std::vector<VariableFilterCall> m_filterCalls;
 };
-
+}
 #endif	/* _VARIABLEEXPRESSION_H */

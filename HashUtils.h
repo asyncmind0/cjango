@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-#ifndef _HASHUTILS_H
-#define _HASHUTILS_H
+#ifndef _CJANGO_HASHUTILS_H
+#define _CJANGO_HASHUTILS_H
 
 #include <stddef.h>
 #include <tr1/functional>

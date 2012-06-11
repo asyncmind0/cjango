@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-#ifndef _TAGNODEFACTORY_H
-#define	_TAGNODEFACTORY_H
+#ifndef _CJANGO_TAGNODEFACTORY_H
+#define	_CJANGO_TAGNODEFACTORY_H
 
 #include "HashUtils.h"
 #include "TagNode.h"
@@ -29,6 +29,7 @@
 #include <cstring>
 #include <tr1/unordered_map>
 
+namespace cjango{
 struct stringCompare {
     inline bool operator()(const char *s1, const char *s2) const
     {
@@ -54,5 +55,6 @@ private:
 private:
     TagNodeFactoryMap m_factoryMap;
 };
+}
 
 #endif	/* _TAGNODEFACTORY_H */

@@ -8,6 +8,6 @@ env.Program(target='testTokenizer', source=['testTokenizer.cpp'])
 env.Append(CCFLAGS = ['-g'])
 env.Append(CPPPATH = ['../'])
 env.Append(LIBPATH = ['../'])
-env.Append(LIBS = ['gtest_main', 'cjango'])
+env.Append(LIBS = ['gtest_main', 'cjango', 'gtest'])
 env.Append(LINKFLAGS = ['-Wl,--rpath,../'])
 

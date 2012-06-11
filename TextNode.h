@@ -20,14 +20,15 @@
  * SOFTWARE.
  */
 
-#ifndef _TEXTNODE_H
-#define	_TEXTNODE_H
+#ifndef _CJANGO_TEXTNODE_H
+#define	_CJANGO_TEXTNODE_H
 
 #include "Node.h"
 
 #include <ostream>
 #include <string>
 
+namespace cjango{
 class Context;
 class TextNode : public Node {
 public:
@@ -42,5 +43,6 @@ public:
 private:
     std::string m_text;
 };
+}
 
 #endif	/* _TEXTNODE_H */

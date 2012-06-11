@@ -22,6 +22,7 @@
 
 #include "Context.h"
 
+namespace cjango{
 Context::Context(const VariableMap& variables)
 {
     m_variableStack.push_back(variables);
@@ -90,4 +91,5 @@ void Context::remove(const std::string& key)
 
     VariableMap& map = m_variableStack.back();
     map.erase(key);
+}
 }

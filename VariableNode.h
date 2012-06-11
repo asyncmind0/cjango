@@ -20,8 +20,8 @@
  * SOFTWARE.
  */
 
-#ifndef _VARIABLENODE_H
-#define	_VARIABLENODE_H
+#ifndef _CJANGO_VARIABLENODE_H
+#define	_CJANGO_VARIABLENODE_H
 
 #include "Node.h"
 
@@ -31,6 +31,7 @@
 #include <ostream>
 #include <string>
 
+namespace cjango{
 class VariableNode : public Node {
 public:
     VariableNode(Node* parent, const std::string& variable);
@@ -43,5 +44,6 @@ public:
 private:
     VariableExpression* m_expression;
 };
+}
 
 #endif	/* _VARIABLENODE_H */

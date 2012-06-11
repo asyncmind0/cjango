@@ -27,6 +27,7 @@
 #include "VariantUtils.h"
 
 #include <cstdlib>
+namespace cjango{
 
 // The cleanest way would be to have a separate tokenizer for variable expressions.
 VariableExpression* VariableExpression::parse(const std::string& expression)
@@ -90,4 +91,5 @@ const Variant& VariableExpression::evaluate(Context* context) const
     }
 
     return context->get(m_name);
+}
 }

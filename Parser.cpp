@@ -36,6 +36,7 @@
 
 #include <cassert>
 
+namespace cjango{
 Parser::Parser(std::istream* stream)
     : m_tokenizer(new Tokenizer(stream))
     , m_lastTokenType(Tokenizer::Token::None)
@@ -213,4 +214,5 @@ TemplateNode* Parser::parse()
     } while (token.type != Tokenizer::Token::EndOfInput);
 
     return root;
+}
 }

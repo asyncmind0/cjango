@@ -20,14 +20,15 @@
  * SOFTWARE.
  */
 
-#ifndef _COMMENTNODE_H
-#define	_COMMENTNODE_H
+#ifndef _CJANGO_COMMENTNODE_H
+#define	_CJANGO_COMMENTNODE_H
 
 #include "Node.h"
 
 #include <ostream>
 #include <string>
 
+namespace cjango{
 class Context;
 class CommentNode : public Node {
 public:
@@ -42,5 +43,6 @@ public:
 private:
     std::string m_text;
 };
+}
 
 #endif	/* _COMMENTNODE_H */

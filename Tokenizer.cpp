@@ -25,6 +25,7 @@
 #include <cassert>
 #include <istream>
 
+namespace cjango{
 Tokenizer::Tokenizer(std::istream* stream)
     : m_state(Text)
     , m_stream(stream)
@@ -282,4 +283,5 @@ bool Tokenizer::peekCharacter(char& c)
         return false;
     }
     return true;
+}
 }

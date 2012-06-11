@@ -22,6 +22,7 @@
 
 #include "TagNode.h"
 
+namespace cjango{
 TagNode::TagNode(Node* parent)
     : Node(Tag, parent)
 {
@@ -29,4 +30,5 @@ TagNode::TagNode(Node* parent)
 
 TagNode::~TagNode()
 {
+}
 }

@@ -20,13 +20,14 @@
  * SOFTWARE.
  */
 
-#ifndef _TEMPLATENODE_H
-#define	_TEMPLATENODE_H
+#ifndef _CJANGO_TEMPLATENODE_H
+#define	_CJANGO_TEMPLATENODE_H
 
 #include "Node.h"
 
 #include <ostream>
 
+namespace cjango{
 class Context;
 class TemplateNode : public Node {
 public:
@@ -35,5 +36,5 @@ public:
 
     void render(Context* context, std::ostream* stream) const;
 };
-
+}
 #endif	/* _TEMPLATENODE_H */
